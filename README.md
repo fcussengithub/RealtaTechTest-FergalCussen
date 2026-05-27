@@ -1,9 +1,11 @@
 # Shady Meadows B&B — SDET Technical Challenge
 
+**Author:** Fergal Cussen — fcussen333@yahoo.co.uk
+
 ## Part 1: Karate API Tests
 
 ### Prerequisites
-- Java 21
+- Java 21 (exactly — Karate 1.4.1 is not compatible with Java 22+)
 - Maven 3.8+
 
 ### Running the tests
