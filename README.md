@@ -131,6 +131,8 @@ Open the Command Palette (`Ctrl+Shift+P`) and choose **Tasks: Run Task**, or use
 
 4. **Homepage test** - one requirement was "[v]erify that the "Book this room" buttons are present for the listed room types". The actual text on the webpage is "Book now", not "Book this room". I assumed this to be an inaccuracy in the test rather than a bug.
 
+5. **Missing page objects** — I should have implemented a `HomePage` and `AdminPage` page object class for the Playwright tests but did not. The helper functions in `admin.spec.ts` (`scrapeHomepageRooms`, `loginAsAdmin`, etc.) are doing the same job informally. A page object model would be the correct approach for a production suite.
+
 ---
 
 ## CI/CD Integration
