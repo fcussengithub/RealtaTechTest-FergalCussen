@@ -1,0 +1,128 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Karate: Run All API Tests",
+      "type": "shell",
+      "command": "mvn test",
+      "options": {
+        "cwd": "${workspaceFolder}/karate",
+        "env": { "JAVA_HOME": "C:\\Program Files\\Java\\jdk-21.0.11" }
+      },
+      "group": { "kind": "test", "isDefault": true },
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Karate: Run branding.feature",
+      "type": "shell",
+      "command": "mvn test -Dkarate.options=classpath:features/branding.feature",
+      "options": {
+        "cwd": "${workspaceFolder}/karate",
+        "shell": { "executable": "cmd", "args": ["/d", "/c"] },
+        "env": { "JAVA_HOME": "C:\\Program Files\\Java\\jdk-21.0.11" }
+      },
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Karate: Run rooms.feature",
+      "type": "shell",
+      "command": "mvn test -Dkarate.options=classpath:features/rooms.feature",
+      "options": {
+        "cwd": "${workspaceFolder}/karate",
+        "shell": { "executable": "cmd", "args": ["/d", "/c"] },
+        "env": { "JAVA_HOME": "C:\\Program Files\\Java\\jdk-21.0.11" }
+      },
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Karate: Run booking.feature",
+      "type": "shell",
+      "command": "mvn test -Dkarate.options=classpath:features/booking.feature",
+      "options": {
+        "cwd": "${workspaceFolder}/karate",
+        "shell": { "executable": "cmd", "args": ["/d", "/c"] },
+        "env": { "JAVA_HOME": "C:\\Program Files\\Java\\jdk-21.0.11" }
+      },
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Install Dependencies",
+      "type": "shell",
+      "command": "npm install && npx playwright install chromium",
+      "options": { "cwd": "${workspaceFolder}/playwright" },
+      "group": "build",
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Run All UI Tests",
+      "type": "shell",
+      "command": "npm test",
+      "options": { "cwd": "${workspaceFolder}/playwright" },
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Run homepage.spec.ts",
+      "type": "shell",
+      "command": "npx playwright test tests/homepage.spec.ts",
+      "options": { "cwd": "${workspaceFolder}/playwright" },
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Run admin.spec.ts",
+      "type": "shell",
+      "command": "npx playwright test tests/admin.spec.ts",
+      "options": { "cwd": "${workspaceFolder}/playwright" },
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Run All UI Tests (Headed)",
+      "type": "shell",
+      "command": "npx playwright test --headed",
+      "options": { "cwd": "${workspaceFolder}/playwright" },
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Run homepage.spec.ts (Headed)",
+      "type": "shell",
+      "command": "npx playwright test tests/homepage.spec.ts --headed",
+      "options": { "cwd": "${workspaceFolder}/playwright" },
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Run admin.spec.ts (Headed)",
+      "type": "shell",
+      "command": "npx playwright test tests/admin.spec.ts --headed",
+      "options": { "cwd": "${workspaceFolder}/playwright" },
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    },
+    {
+      "label": "Playwright: Open HTML Report",
+      "type": "shell",
+      "command": "npx playwright show-report",
+      "options": { "cwd": "${workspaceFolder}/playwright" },
+      "group": "test",
+      "presentation": { "reveal": "always", "panel": "dedicated" },
+      "problemMatcher": []
+    }
+  ]
+}

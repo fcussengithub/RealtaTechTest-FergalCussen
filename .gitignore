@@ -1,0 +1,22 @@
+# Maven / Java
+target/
+*.class
+
+# Node.js / Playwright
+node_modules/
+playwright-report/
+test-results/
+
+# IDE
+.idea/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+
+# Claude Code
+.claude/
